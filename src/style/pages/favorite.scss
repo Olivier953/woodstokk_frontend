@@ -1,0 +1,51 @@
+.favoritePage {
+  & h1 {
+    margin-left: 4.1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: $subFont;
+    background-color: $woodcolor;
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+  }
+
+  &_content {
+    margin-top: 3rem;
+    margin-left: 8rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    & img {
+      width: 22rem;
+      height: 13rem;
+    }
+
+    &_card {
+      display: grid;
+      place-items: center;
+      margin-bottom: 2.5rem;
+
+      & h4 {
+        text-transform: uppercase;
+        margin-top: 10px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        background-color: $woodcolor;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      & button {
+        background-color: black;
+        border: none;
+        padding: 5px;
+        color: $woodcolor;
+        font-weight: bold;
+        text-transform: capitalize;
+        border-radius: 5px;
+      }
+    }
+  }
+}

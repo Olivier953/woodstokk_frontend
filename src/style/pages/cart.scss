@@ -1,0 +1,102 @@
+.cart {
+  & h1 {
+    margin-left: 4.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: $subFont;
+    background-color: $woodcolor;
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+  }
+  &_summary {
+    grid-template-rows: 3rem auto 3rem;
+    margin-left: 20rem;
+
+    &_title {
+      margin-top: 3rem;
+      grid-row: 1;
+      width: 50rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: black;
+      color: $woodcolor;
+      font-size: 20px;
+      border-radius: 5px;
+
+      &_list {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        margin-right: 2rem;
+      }
+    }
+
+    &_products {
+      grid-row: 2;
+      display: grid;
+      margin-top: 2rem;
+
+      &_list {
+        display: flex;
+        margin-bottom: 1.5rem;
+
+        & img {
+          width: 10rem;
+          height: 6rem;
+          border-radius: 10px;
+        }
+        &_name {
+          text-transform: capitalize;
+          width: 12rem;
+        }
+        &_qty {
+          display: flex;
+          width: 5.5rem;
+          justify-content: space-between;
+          margin-left: 7rem;
+
+          & button {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: none;
+            background-color: $woodcolor;
+            font-weight: bold;
+          }
+          &_number {
+            font-weight: bold;
+            margin-top: 3px;
+          }
+        }
+
+        &_price {
+          margin-left: 10.5rem;
+        }
+      }
+    }
+
+    &_total {
+      grid-row: 3;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: black;
+      color: $woodcolor;
+      font-size: 20px;
+      padding: 2px;
+      display: flex;
+      border-radius: 5px;
+      width: 50rem;
+
+      &_title {
+        margin-left: 29rem;
+      }
+
+      & span {
+        margin-left: 11rem;
+        font-size: 20px;
+      }
+    }
+  }
+}

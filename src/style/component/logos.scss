@@ -1,0 +1,37 @@
+.logo {
+  margin-top: -3.8rem;
+  position: absolute;
+
+  &_productsPage {
+    margin-top: -6.5rem;
+  }
+
+  &_content {
+    display: flex;
+    font-size: 30px;
+    width: 6.5rem;
+    justify-content: space-between;
+    font-weight: bold;
+    visibility: hidden;
+  }
+}
+
+.carousel_content_card:hover .logo_content {
+  visibility: visible;
+}
+
+.logoMagnify,
+.logoBasket {
+  background-color: $woodcolor;
+  color: white;
+  padding: 9px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.logoMagnify:hover,
+.logoBasket:hover {
+  background-color: rgb(230, 215, 131);
+}

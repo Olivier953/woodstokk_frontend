@@ -1,0 +1,84 @@
+.registration {
+  font-family: $mainFont;
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
+  font-size: 15px;
+
+  &_content {
+    border: 1px solid rgb(231, 219, 219);
+    border-radius: 10px;
+    width: 45rem;
+    height: 49vh;
+  }
+
+  &_information {
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+    &_personal {
+      & p {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      &_names {
+        margin-top: 15px;
+        width: 41rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &_account {
+      margin-top: 2rem;
+      & p {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      &_password {
+        display: flex;
+        justify-content: space-between;
+        width: 41rem;
+      }
+    }
+  }
+
+  &_input {
+    &_names {
+      width: 18rem;
+      height: 2rem;
+      outline: none;
+    }
+    &_email {
+      margin-top: 1.5rem;
+      width: 41rem;
+      height: 2rem;
+      outline: none;
+    }
+    &_password {
+      margin-top: 3px;
+      width: 18rem;
+      height: 2rem;
+      outline: none;
+    }
+  }
+
+  &_button {
+    margin-top: 2rem;
+    width: 14rem;
+    height: 2.5rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: $woodcolor;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  padding-left: 20px;
+}

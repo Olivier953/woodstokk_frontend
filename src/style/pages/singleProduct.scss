@@ -1,0 +1,47 @@
+.singleProduct {
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+  margin-top: 3rem;
+
+  & h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: $subFont;
+    background-color: $woodcolor;
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+  }
+
+  &_content {
+    display: grid;
+    place-items: center;
+    margin-top: 3.5rem;
+    width: 40rem;
+
+    & img {
+      width: 40rem;
+      border-radius: 10px;
+      height: 23rem;
+    }
+
+    & h3 {
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+      background-color: $woodcolor;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    &_desc {
+      text-align: justify;
+      margin-top: 10px;
+    }
+
+    &_price {
+      margin-top: -10px;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.shoppingCart {
+  background-color: rgb(241, 232, 232);
+  width: 22rem;
+  position: fixed;
+  z-index: 999;
+  margin-left: 68rem;
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 4rem auto 7rem;
+  border-radius: 10px;
+
+  &_top {
+    display: flex;
+    grid-row: 1;
+
+    &_cross {
+      font-size: 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    & h2 {
+      font-family: 'Lobster', cursive;
+      margin-top: 10px;
+      margin-left: 7rem;
+    }
+  }
+
+  &_productsList {
+    grid-row: 2;
+    background-color: white;
+  }
+
+  &_bottom {
+    grid-row: 3;
+    display: grid;
+    place-items: center;
+    &_total {
+      font-family: 'Lobster', cursive;
+      margin-bottom: 10px;
+    }
+    &_checkoutBtn {
+      width: 80%;
+      font-size: 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: -2rem;
+      height: 2.5rem;
+      margin-bottom: 10px;
+      background-color: gold;
+      font-weight: bold;
+    }
+  }
+}
+
+.productListBasket {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+
+  &_left {
+    & img {
+      width: 6rem;
+      height: 4rem;
+      border-radius: 5px;
+    }
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &_middle {
+    margin-left: 2.5rem;
+    & h4 {
+      text-transform: capitalize;
+      font-size: 15px;
+    }
+    & p {
+      margin-top: -5px;
+      font-size: 12px;
+      margin-bottom: -2px;
+    }
+    & button {
+      width: 4rem;
+      height: 1.5rem;
+      font-size: 10px;
+      border: none;
+      text-transform: uppercase;
+      background-color: $woodcolor;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &_counter {
+    display: grid;
+    margin-right: 10px;
+    &_add {
+      display: grid;
+      place-items: center;
+      width: 1.3rem;
+      height: 1.3rem;
+      font-size: 10px;
+      border: none;
+      text-transform: uppercase;
+      background-color: $woodcolor;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    &_quantity {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    &_remove {
+      margin-top: -16px;
+      display: grid;
+      place-items: center;
+      width: 1.3rem;
+      height: 1.3rem;
+      font-size: 10px;
+      border: none;
+      text-transform: uppercase;
+      background-color: $woodcolor;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}

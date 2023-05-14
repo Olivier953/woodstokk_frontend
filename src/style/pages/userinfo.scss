@@ -1,0 +1,34 @@
+.userinfo {
+  font-family: $mainFont;
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
+  font-size: 15px;
+
+  &_content {
+    border: 1px solid rgb(231, 219, 219);
+    border-radius: 10px;
+    width: 47rem;
+    height: 49vh;
+
+    & h5 {
+      margin-top: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: underline $woodcolor;
+    }
+
+    &_subtitle {
+      margin-top: 3rem;
+      list-style: none;
+
+      &_entitled {
+        margin-bottom: 10px;
+        & span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

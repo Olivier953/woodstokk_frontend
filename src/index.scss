@@ -1,0 +1,28 @@
+/////////////////BASE////////////////
+
+@import './style/base/mixin.scss';
+@import './style/base/typography.scss';
+@import './style/base/color.scss';
+@import './style/base/spinner.scss';
+
+/////////////////LAYOUT////////////////
+
+@import './style/layout/layout.scss';
+
+/////////////////PAGES////////////////
+
+@import './style/pages/registration.scss';
+@import './style/pages/login.scss';
+@import './style/pages/userinfo.scss';
+@import './style//pages/home.scss';
+@import './style/pages/singleProduct.scss';
+@import './style//pages/products.scss';
+@import './style/pages/favorite.scss';
+@import './style//pages/cart.scss';
+@import './style//pages/checkout.scss';
+@import './style/pages/about.scss';
+
+/////////////////COMPONENT////////////////
+
+@import './style/component/shoppingCart.scss';
+@import './style/component/logos.scss';
