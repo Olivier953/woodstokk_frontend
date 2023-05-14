@@ -8,7 +8,7 @@ export const Cart = () => {
 
   return (
     <div className="cart">
-      <h1>My Cart</h1>
+      <h1>My CartSS</h1>
       <div className="cart_summary">
         <div className="cart_summary_title">
           <ul className="cart_summary_title_list">
