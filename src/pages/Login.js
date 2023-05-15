@@ -57,7 +57,7 @@ const Login = () => {
           toast.success(response.data.message);
           localStorage.setItem('token', response.data.data);
           setTimeout(() => {
-            window.location.href = '/myaccount';
+            window.location.href = '/';
           }, 1000);
           login.isLoggedIn.set(true);
         } else {
