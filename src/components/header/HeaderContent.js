@@ -1,7 +1,9 @@
 import { SlBasket } from 'react-icons/sl';
-import { FaMoon } from 'react-icons/fa';
+import { BsArrowDownCircleFill } from 'react-icons/bs';
+import { AiOutlineMenu } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 import ShoppingCart from '../shoppingCart/ShoppingCart';
+import { useState } from 'react';
 
 const HeaderContent = ({
   shoppingCart,
@@ -19,11 +21,34 @@ const HeaderContent = ({
     };
   };
 
+  const [toggleLeftMenu, setToggleLeftMenu] = useState(true);
+  const [toggleRightMenu, setToggleRightMenu] = useState(true);
+
+  const showToggleLeftMenu = () => {
+    setToggleLeftMenu((prev) => !prev);
+  };
+
+  const showToggleRightMenu = () => {
+    setToggleRightMenu((prev) => !prev);
+  };
+
   return (
     <>
       <div className="header">
         <div className="header_left_menu">
-          <ul>
+          <button
+            className="header_left_menu_toggleBtn"
+            onClick={showToggleLeftMenu}
+          >
+            <AiOutlineMenu />
+          </button>
+          <ul
+            className={
+              toggleLeftMenu
+                ? 'header_left_menu_ul'
+                : 'header_left_menu_ul_expanded'
+            }
+          >
             <li>
               <NavLink style={navLinkStyles} to="/">
                 Home
@@ -51,16 +76,26 @@ const HeaderContent = ({
             wood<span>stokk</span>
           </h1>
         </div>
-        <div className="account">
-          {!login.isLoggedIn.get ? (
-            ''
-          ) : (
-            <NavLink style={navLinkStyles} to="/myaccount">
-              Account
-            </NavLink>
-          )}
+
+        <div className="header_right_menu_toggle" onClick={showToggleRightMenu}>
+          <BsArrowDownCircleFill />
         </div>
-        <div className="header_right_menu">
+        <div
+          className={
+            toggleRightMenu
+              ? 'header_right_menu'
+              : 'header_right_menu_expandedRight'
+          }
+        >
+          <div>
+            {!login.isLoggedIn.get ? (
+              ''
+            ) : (
+              <NavLink style={navLinkStyles} to="/myaccount">
+                Account
+              </NavLink>
+            )}
+          </div>
           {!login.isLoggedIn.get ? (
             <NavLink style={navLinkStyles} to="/login">
               Login
@@ -70,7 +105,6 @@ const HeaderContent = ({
               Logout
             </NavLink>
           )}
-          <FaMoon className="header_right_menu_moon" />
           <div className="header_right_menu_shoppingCart">
             <SlBasket
               className="header_right_menu_shoppingCart_basket"

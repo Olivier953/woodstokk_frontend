@@ -4,6 +4,10 @@
   position: relative;
   overflow: hidden;
   margin-top: 20px;
+  @include respond(phone) {
+    width: 23.5rem;
+    height: 45vh;
+  }
 
   &_slide {
     position: absolute;
@@ -32,6 +36,10 @@
     z-index: 10;
     margin-top: 19rem;
     margin-left: 6rem;
+    @include respond(phone) {
+      margin-top: 9rem;
+      margin-left: 2rem;
+    }
 
     &_title {
       text-transform: uppercase;
@@ -58,6 +66,9 @@
 
 .carousel {
   margin-top: 4rem;
+  @include respond(phone) {
+    margin-top: 2rem;
+  }
   & h1 {
     text-align: center;
     text-transform: capitalize;
@@ -68,6 +79,10 @@
     padding: 5px;
     border-radius: 5px;
     color: black;
+    @include respond(phone) {
+      width: 20rem;
+      margin-left: 1.8rem;
+    }
   }
 
   &_content {
@@ -75,15 +90,27 @@
     margin-top: 3rem;
     display: flex;
     margin-left: 5rem;
+    @include respond(phone) {
+      display: grid;
+      margin-left: 1.8rem;
+      margin-top: 2rem;
+    }
 
     &_card {
       margin-right: 2rem;
       display: grid;
       place-items: center;
+      @include respond(phone) {
+        margin-bottom: 1.5rem;
+      }
       & img {
         width: 25rem;
         height: 15rem;
         border-radius: 5px;
+        @include respond(phone) {
+          width: 19rem;
+          height: 12rem;
+        }
       }
       & p {
         text-transform: uppercase;

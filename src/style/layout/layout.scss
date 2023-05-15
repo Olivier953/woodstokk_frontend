@@ -22,14 +22,54 @@
   margin-right: 2.5rem;
   font-family: $mainFont;
   color: $bgComponent;
+  @include respond(phone) {
+    width: 20rem;
+    margin-top: 1.5rem;
+  }
 
   &_left_menu {
-    & ul {
+    &_toggleBtn {
+      display: none;
+      @include respond(phone) {
+        display: block;
+        border: none;
+        width: 2rem;
+        border-radius: 10px;
+        background-color: $woodcolor;
+        color: black;
+        height: 1.7rem;
+      }
+    }
+    &_ul {
       display: flex;
       list-style: none;
       width: 24rem;
       justify-content: space-between;
       margin-top: 10px;
+      @include respond(phone) {
+        display: none;
+      }
+
+      &_expanded {
+        @include respond(phone) {
+          margin-top: 10px;
+          height: 14.5rem;
+          display: grid;
+          position: absolute;
+          z-index: 999;
+          background-color: rgb(136, 131, 131);
+          width: 8rem;
+          color: white;
+          border-radius: 5px;
+          text-decoration: none;
+          list-style: none;
+          & li {
+            margin-left: -10px;
+            margin-top: 10px;
+          }
+        }
+      }
+
       & li {
         text-decoration: none;
         margin-right: 10px;
@@ -39,14 +79,49 @@
 
   &_right_menu {
     display: flex;
-    width: 9rem;
+    width: 15rem;
     justify-content: space-between;
     margin-top: 10px;
+    @include respond(phone) {
+      display: none;
+    }
 
-    &_moon {
-      font-size: 20px;
-      cursor: pointer;
-      margin-top: 3px;
+    &_expandedRight {
+      @include respond(phone) {
+        margin-top: 2.1rem;
+        padding: 5px;
+        height: 9rem;
+        display: grid;
+        position: absolute;
+        right: 10px;
+        z-index: 999;
+        background-color: rgb(136, 131, 131);
+        width: 8rem;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        list-style: none;
+      }
+    }
+
+    &_toggle {
+      display: none;
+      @include respond(phone) {
+        display: block;
+        font-size: 25px;
+        margin-top: -5px;
+        color: $woodcolor;
+      }
+    }
+
+    &_title {
+      width: 11rem;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 1.5rem;
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &_shoppingCart {
@@ -55,6 +130,7 @@
         font-weight: bold;
         cursor: pointer;
         position: relative;
+        margin-right: 20px;
       }
 
       & span {
@@ -77,6 +153,9 @@
     text-transform: uppercase;
     margin-top: 3px;
     margin-left: -3.5rem;
+    @include respond(phone) {
+      margin-left: 17px;
+    }
 
     & span {
       color: $woodcolor;
@@ -117,13 +196,20 @@
       font-size: 17px;
       text-transform: capitalize;
       text-decoration: underline;
+      @include respond(phone) {
+        margin-left: 3.6rem;
+        margin-top: 5px;
+      }
     }
 
     &_email {
       margin-top: 1rem;
-      margin-bottom: -5px;
+      margin-bottom: -2px;
       display: flex;
       font-size: 25px;
+      @include respond(phone) {
+        margin-top: -2px;
+      }
       & p {
         margin-left: 10px;
         font-size: 15px;
@@ -133,6 +219,10 @@
     &_phone {
       display: flex;
       font-size: 25px;
+      @include respond(phone) {
+        margin-left: 4rem;
+        margin-top: -4px;
+      }
 
       & p {
         margin-left: 10px;
