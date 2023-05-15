@@ -49,7 +49,7 @@ const Login = () => {
     if (ifFieldsCorrect()) {
       try {
         login.loading.set(true);
-        const response = await axios.post('http://localhost:5000/user/login', {
+        const response = await axios.post('https://woodstokk-back.onrender.com/user/login', {
           ...fields,
         });
         login.loading.set(false);

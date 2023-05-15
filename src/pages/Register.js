@@ -60,7 +60,7 @@ const Register = () => {
       try {
         login.loading.set(true);
         const response = await axios.post(
-          'http://localhost:5000/user/register',
+          'https://woodstokk-back.onrender.com/user/register',
           { ...fields }
         );
         login.loading.set(false);
