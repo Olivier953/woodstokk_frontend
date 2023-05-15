@@ -11,7 +11,7 @@ const MyAccount = () => {
     const getUser = async () => {
       try {
         const response = await axios.post(
-          'http://localhost:5000/user/userinfo',
+          'https://woodstokk-back.onrender.com/user/userinfo',
           { token: localStorage.getItem('token') },
           {
             headers: {
