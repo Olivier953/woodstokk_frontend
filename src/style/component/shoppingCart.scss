@@ -8,6 +8,14 @@
   display: grid;
   grid-template-rows: 4rem auto 7rem;
   border-radius: 10px;
+  @include respond(phone){
+  position: fixed;
+  z-index: 999;
+  margin-top: 4.5rem;
+    margin-left: 12rem;
+    width: 11rem;
+
+  }
 
   &_top {
     display: flex;
@@ -23,12 +31,18 @@
       font-family: 'Lobster', cursive;
       margin-top: 10px;
       margin-left: 7rem;
+      @include respond(phone){
+        margin-left: 2rem;
+      }
     }
   }
 
   &_productsList {
     grid-row: 2;
     background-color: white;
+    @include respond(phone){
+    width: 11rem;
+  }
   }
 
   &_bottom {
@@ -40,6 +54,9 @@
     &_total {
       font-family: 'Lobster', cursive;
       margin-bottom: 10px;
+      @include respond(phone){
+        margin-left: 0;
+      }
     }
     &_checkoutBtn {
       width: 80%;
@@ -51,6 +68,11 @@
       margin-bottom: 10px;
       background-color: gold;
       font-weight: bold;
+      @include respond(phone){
+        font-size: 14px;
+        width: 2rem;
+        margin-top: -20px;
+      }
     }
   }
 }
@@ -60,12 +82,19 @@
   margin-top: 20px;
   margin-left: 10px;
   margin-bottom: 15px;
+  @include respond(phone){
+    width: 6rem;
+  }
 
   &_left {
     & img {
       width: 6rem;
       height: 4rem;
       border-radius: 5px;
+      @include respond(phone){
+        width: 4rem;
+        height: 3rem;
+      }
     }
   }
 
@@ -80,11 +109,17 @@
     & h4 {
       text-transform: capitalize;
       font-size: 15px;
+      @include respond(phone){
+        display: none;
+      }
     }
     & p {
       margin-top: -5px;
       font-size: 12px;
       margin-bottom: -2px;
+      @include respond(phone){
+        display: none;
+      }
     }
     & button {
       width: 4rem;
@@ -96,12 +131,19 @@
       font-weight: bold;
       border-radius: 10px;
       cursor: pointer;
+      @include respond(phone){
+        display: none;
+      }
     }
   }
 
   &_counter {
     display: grid;
     margin-right: 10px;
+    @include respond(phone){
+      height: 3rem;
+      margin-top: -8px;
+    }
     &_add {
       display: grid;
       place-items: center;
@@ -114,6 +156,8 @@
       font-weight: bold;
       border-radius: 10px;
       cursor: pointer;
+      @include respond(phone){
+    }
     }
     &_quantity {
       margin-left: 5px;

@@ -38,6 +38,8 @@
         background-color: $woodcolor;
         color: black;
         height: 1.7rem;
+                margin-left: -15px;
+
       }
     }
     &_ul {
@@ -79,9 +81,10 @@
 
   &_right_menu {
     display: flex;
-    width: 15rem;
+    width: 10.8rem;
     justify-content: space-between;
     margin-top: 10px;
+    margin-right: -14rem ;
     @include respond(phone) {
       display: none;
     }
@@ -126,11 +129,17 @@
 
     &_shoppingCart {
       &_basket {
+        margin-top: 11px;
         font-size: 25px;
         font-weight: bold;
         cursor: pointer;
         position: relative;
         margin-right: 20px;
+        @include respond(phone){
+          display: block;
+          margin-right: 5px;
+          margin-top: 3.5px;
+        }
       }
 
       & span {

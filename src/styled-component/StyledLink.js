@@ -66,6 +66,13 @@ const LinkToCart = styled(Link)`
     background-color: black;
     color: rgb(223, 175, 80);
   }
+
+  @media only screen and (max-width: 37.5em){
+    width: 8rem;
+    font-size: 15px;
+    padding: 1px;
+    height: 2rem;
+  }
 `;
 
 const LinkToPayPal = styled(Link)`
