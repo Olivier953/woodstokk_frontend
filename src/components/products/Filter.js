@@ -98,5 +98,3 @@ const Filter = ({ furnituresList, setFilter, price, setPrice }) => {
 };
 
 export default Filter;
-
-

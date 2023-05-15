@@ -59,8 +59,6 @@ const LinkToCart = styled(Link)`
   height: 3rem;
   display: grid;
   place-items: center;
-  position: absolute;
-  top: 16rem;
   right: 5rem;
   text-decoration: none;
 

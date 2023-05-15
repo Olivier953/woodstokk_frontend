@@ -1,7 +1,7 @@
 import { SlBasket } from 'react-icons/sl';
 import { FaMoon } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import ShoppingCart from "../shoppingCart/ShoppingCart"
+import ShoppingCart from '../shoppingCart/ShoppingCart';
 
 const HeaderContent = ({
   shoppingCart,

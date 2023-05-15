@@ -116,6 +116,7 @@
     & h3 {
       font-size: 17px;
       text-transform: capitalize;
+      text-decoration: underline;
     }
 
     &_email {
@@ -132,9 +133,11 @@
     &_phone {
       display: flex;
       font-size: 25px;
+
       & p {
         margin-left: 10px;
         font-size: 15px;
+        margin-bottom: 5px;
       }
     }
   }

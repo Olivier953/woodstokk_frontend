@@ -37,11 +37,9 @@ const MyAccount = () => {
     getUser();
   }, [navigate, login.loading]);
 
-  console.log(userDatas)
+  console.log(userDatas);
 
   return <MyAccountContent userDatas={userDatas} />;
 };
 
 export default MyAccount;
-
-

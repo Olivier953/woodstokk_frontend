@@ -30,11 +30,9 @@ const ShoppingCart = ({ cart, closeShoppingCart }) => {
         <h2 className="shoppingCart_bottom_total">
           Total : ${cart.getTotalCost().toFixed(2)}
         </h2>
-        <button>
-          <LinkToCart to="/cart" className="shoppingCart_bottom_checkoutBtn">
-            Checkout
-          </LinkToCart>
-        </button>
+        <LinkToCart to="/cart" className="shoppingCart_bottom_checkoutBtn">
+          Checkout
+        </LinkToCart>
       </div>
     </div>
   );
