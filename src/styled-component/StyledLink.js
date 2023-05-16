@@ -31,6 +31,15 @@ const LinkToAllProducts = styled(Link)`
     background-color: black;
     color: rgb(223, 175, 80);
   }
+
+  @media only screen and (max-width: 37.5em) {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 10rem;
+    right: 11rem;
+  }
 `;
 
 const LinkToFavorite = styled(Link)`
@@ -94,6 +103,11 @@ const LinkToPayPal = styled(Link)`
   :hover {
     background-color: black;
     color: rgb(223, 175, 80);
+  }
+  @media only screen and (max-width: 37.5em) {
+    width: 8rem;
+    font-size: 15px;
+    margin-left: 8rem;
   }
 `;
 

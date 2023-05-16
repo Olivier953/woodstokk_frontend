@@ -9,6 +9,9 @@
     padding: 5px;
     border-radius: 5px;
     color: black;
+    @include respond(phone) {
+      margin-left: 1.2rem;
+    }
   }
 
   & p {
@@ -17,5 +20,8 @@
     width: 85%;
     font-size: 20px;
     margin-left: 5rem;
+    @include respond(phone) {
+      margin-left: 1.7rem;
+    }
   }
 }

@@ -9,10 +9,18 @@
     padding: 5px;
     border-radius: 5px;
     color: black;
+    @include respond(phone) {
+      width: 20.5rem;
+      margin-left: 1.5rem;
+    }
   }
   &_summary {
     grid-template-rows: 3rem auto 3rem;
     margin-left: 20rem;
+    @include respond(phone) {
+      width: 20.5rem;
+      margin-left: 1.5rem;
+    }
 
     &_title {
       margin-top: 3rem;
@@ -24,6 +32,10 @@
       color: $woodcolor;
       font-size: 20px;
       border-radius: 5px;
+      @include respond(phone) {
+        width: 20.8rem;
+        font-size: 15px;
+      }
 
       &_list {
         display: flex;
@@ -37,25 +49,44 @@
       grid-row: 2;
       display: grid;
       margin-top: 2rem;
+      @include respond(phone) {
+        margin-top: 1rem;
+      }
 
       &_list {
         display: flex;
         margin-bottom: 1.5rem;
+        @include respond(phone) {
+          margin-left: 1.9rem;
+        }
 
         & img {
           width: 10rem;
           height: 6rem;
           border-radius: 10px;
+          @include respond(phone) {
+            width: 3rem;
+            height: 2rem;
+            margin-left: 1rem;
+          }
         }
         &_name {
           text-transform: capitalize;
           width: 12rem;
+          @include respond(phone) {
+            width: 3rem;
+            font-size: 12px;
+          }
         }
         &_qty {
           display: flex;
           width: 5.5rem;
           justify-content: space-between;
           margin-left: 7rem;
+          @include respond(phone) {
+            width: 3.5rem;
+            margin-left: 1.8rem;
+          }
 
           & button {
             width: 2rem;
@@ -64,15 +95,25 @@
             border: none;
             background-color: $woodcolor;
             font-weight: bold;
+            @include respond(phone) {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
           }
           &_number {
             font-weight: bold;
             margin-top: 3px;
+            @include respond(phone) {
+              margin-top: 1px;
+            }
           }
         }
 
         &_price {
           margin-left: 10.5rem;
+          @include respond(phone) {
+            margin-left: 1.7rem;
+          }
         }
       }
     }
@@ -88,14 +129,25 @@
       display: flex;
       border-radius: 5px;
       width: 50rem;
+      @include respond(phone) {
+        width: 20.5rem;
+      }
 
       &_title {
         margin-left: 29rem;
+        @include respond(phone) {
+          margin-left: 10.9rem;
+          font-size: 15px;
+        }
       }
 
       & span {
         margin-left: 11rem;
         font-size: 20px;
+        @include respond(phone) {
+          font-size: 14px;
+          margin-left: 1.6rem;
+        }
       }
     }
   }

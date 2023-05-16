@@ -9,6 +9,9 @@
     padding: 5px;
     border-radius: 5px;
     color: black;
+    @include respond(phone) {
+      margin-left: 1.2rem;
+    }
   }
 
   &_content {
@@ -17,9 +20,18 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    @include respond(phone) {
+      display: grid;
+      margin-left: 1.5rem;
+      margin-top: 1.8rem;
+    }
     & img {
       width: 22rem;
       height: 13rem;
+      @include respond(phone) {
+        width: 15rem;
+        height: 7rem;
+      }
     }
 
     &_card {

@@ -4,12 +4,19 @@
   place-items: center;
   margin-top: 5rem;
   font-size: 15px;
+  @include respond(phone) {
+    margin-top: 0.5rem;
+  }
 
   &_content {
     border: 1px solid rgb(231, 219, 219);
     border-radius: 10px;
     width: 45rem;
     height: 49vh;
+    @include respond(phone) {
+      width: 21rem;
+      height: 70vh;
+    }
   }
 
   &_information {
@@ -26,6 +33,10 @@
         width: 41rem;
         display: flex;
         justify-content: space-between;
+        @include respond(phone) {
+          display: grid;
+          width: 19rem;
+        }
       }
     }
 
@@ -39,6 +50,10 @@
         display: flex;
         justify-content: space-between;
         width: 41rem;
+        @include respond(phone) {
+          display: grid;
+          width: 19rem;
+        }
       }
     }
   }
@@ -48,12 +63,19 @@
       width: 18rem;
       height: 2rem;
       outline: none;
+      @include respond(phone) {
+        margin-bottom: 5px;
+      }
     }
     &_email {
       margin-top: 1.5rem;
       width: 41rem;
       height: 2rem;
       outline: none;
+      @include respond(phone) {
+        width: 18rem;
+        margin-top: 2px;
+      }
     }
     &_password {
       margin-top: 3px;

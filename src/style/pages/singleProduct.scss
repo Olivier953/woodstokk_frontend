@@ -3,6 +3,12 @@
   place-items: center;
   margin-bottom: 30px;
   margin-top: 3rem;
+  @include respond(phone) {
+    display: grid;
+    place-items: center start;
+    margin-top: 0.5rem;
+    width: 20rem;
+  }
 
   & h1 {
     text-align: center;
@@ -13,6 +19,10 @@
     padding: 5px;
     border-radius: 5px;
     color: black;
+    @include respond(phone) {
+      margin-left: 1.5rem;
+      width: 20.5rem;
+    }
   }
 
   &_content {
@@ -20,11 +30,23 @@
     place-items: center;
     margin-top: 3.5rem;
     width: 40rem;
+    @include respond(phone) {
+      display: grid;
+      place-items: center start;
+      margin-top: 1.6rem;
+      width: 23.4rem;
+    }
 
     & img {
       width: 40rem;
       border-radius: 10px;
       height: 23rem;
+      @include respond(phone) {
+        width: 18rem;
+        height: 12rem;
+        margin-top: 1.5rem;
+        margin-left: 2.6rem;
+      }
     }
 
     & h3 {
@@ -33,15 +55,29 @@
       background-color: $woodcolor;
       padding: 5px;
       border-radius: 5px;
+      @include respond(phone) {
+        width: 20rem;
+        display: grid;
+        place-items: center;
+        margin-left: 1.8rem;
+      }
     }
 
     &_desc {
       text-align: justify;
       margin-top: 10px;
+      @include respond(phone) {
+        width: 17rem;
+        margin-left: 3.2rem;
+      }
     }
 
     &_price {
       margin-top: -10px;
+      @include respond(phone) {
+        margin-top: 10px;
+        margin-left: 9rem;
+      }
     }
   }
 }

@@ -4,7 +4,6 @@ import { ProductList } from '../components/products/ProductList';
 import { apiContext } from '../context/ApiContext';
 import { favoriteContext } from '../context/FavoriteContext';
 import { shoppingCartContext } from '../context/ShoppingCartContext';
-import { BsFilter } from 'react-icons/bs';
 
 const Products = () => {
   const {
@@ -24,9 +23,6 @@ const Products = () => {
       <div className="products">
         <h1>list of furnitures</h1>
         <div className="products_content">
-          <div className="logoFilter">
-            <BsFilter />
-          </div>
           <div className="products_content_filter">
             <Filter
               furnituresList={furnituresList}
