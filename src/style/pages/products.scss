@@ -1,5 +1,8 @@
 .products {
   margin-left: 5rem;
+  @include respond(phone) {
+    margin-left: 1.3rem;
+  }
 
   & h1 {
     text-align: center;
@@ -10,16 +13,36 @@
     padding: 5px;
     border-radius: 5px;
     color: black;
+    @include respond(phone) {
+      width: 21rem;
+    }
   }
 
   &_content {
     margin-top: 3rem;
     display: grid;
     grid-template-columns: 20rem 59rem;
+    @include respond(phone) {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+    }
 
     &_filter {
       margin-left: 1rem;
       grid-column: 1;
+      @include respond(phone) {
+        display: block;
+        grid-row: 1;
+        grid-column: 1;
+        margin-left: 1.7rem;
+      }
+
+      &_expanded {
+        display: none;
+        transition: 1s;
+      }
 
       & input {
         margin-left: 10px;
@@ -132,6 +155,13 @@
       display: flex;
       flex-wrap: wrap;
       margin-left: 1rem;
+      @include respond(phone) {
+        grid-row: 2;
+        display: grid;
+        grid-column: 1;
+        margin-left: -1.6rem;
+        margin-top: 1.5rem;
+      }
 
       &_card {
         margin-top: 1rem;
@@ -141,6 +171,10 @@
         & img {
           width: 26rem;
           height: 16rem;
+          @include respond(phone) {
+            width: 19rem;
+            height: 10rem;
+          }
         }
       }
     }

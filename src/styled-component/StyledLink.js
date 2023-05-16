@@ -67,7 +67,7 @@ const LinkToCart = styled(Link)`
     color: rgb(223, 175, 80);
   }
 
-  @media only screen and (max-width: 37.5em){
+  @media only screen and (max-width: 37.5em) {
     width: 8rem;
     font-size: 15px;
     padding: 1px;

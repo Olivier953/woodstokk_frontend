@@ -105,15 +105,14 @@ const HeaderContent = ({
               Logout
             </NavLink>
           )}
-          </div>
-          <div className="header_right_menu_shoppingCart">
-            <SlBasket
-              className="header_right_menu_shoppingCart_basket"
-              onClick={() => showShoppingCart()}
-            />
-            <span>{cart.furnituresCount}</span>
-          </div>
-        
+        </div>
+        <div className="header_right_menu_shoppingCart">
+          <SlBasket
+            className="header_right_menu_shoppingCart_basket"
+            onClick={() => showShoppingCart()}
+          />
+          <span>{cart.furnituresCount}</span>
+        </div>
       </div>
       {shoppingCart ? (
         <ShoppingCart closeShoppingCart={closeShoppingCart} cart={cart} />

@@ -58,42 +58,44 @@ const Filter = ({ furnituresList, setFilter, price, setPrice }) => {
   };
 
   return (
-    <div className="products_content_filter">
-      <input
-        className="products_content_filter_search"
-        type="text"
-        placeholder="Search..."
-        onChange={(e) => handleSearch(e)}
-      />
-      <div className="products_content_filter_companies">
-        <h3>Companies</h3>
-        <ul>
-          <li onClick={filterAll}>All</li>
-          <li onClick={filterIkea}>Ikea</li>
-          <li onClick={filterCaressa}>Caressa</li>
-          <li onClick={filterMarcos}>Marcos</li>
-          <li onClick={filterLiddy}>Liddy</li>
-        </ul>
-      </div>
-      <div className="products_content_filter_price">
-        <h3>Price</h3>
+    <>
+      <div className="products_content_filter">
         <input
-          type="range"
-          min={minPrice}
-          max={maxPrice}
-          value={price}
-          onChange={(e) => handleRange(e)}
+          className="products_content_filter_search"
+          type="text"
+          placeholder="Search..."
+          onChange={(e) => handleSearch(e)}
         />
-        <h4>
-          Show price {'>'} <span>${price / 100}</span>
-        </h4>
+        <div className="products_content_filter_companies">
+          <h3>Companies</h3>
+          <ul>
+            <li onClick={filterAll}>All</li>
+            <li onClick={filterIkea}>Ikea</li>
+            <li onClick={filterCaressa}>Caressa</li>
+            <li onClick={filterMarcos}>Marcos</li>
+            <li onClick={filterLiddy}>Liddy</li>
+          </ul>
+        </div>
+        <div className="products_content_filter_price">
+          <h3>Price</h3>
+          <input
+            type="range"
+            min={minPrice}
+            max={maxPrice}
+            value={price}
+            onChange={(e) => handleRange(e)}
+          />
+          <h4>
+            Show price {'>'} <span>${price / 100}</span>
+          </h4>
+        </div>
+        <div className="products_content_filter_favorites">
+          <LinkToFavorite to="/favorite">
+            <h3>My favorites</h3>
+          </LinkToFavorite>
+        </div>
       </div>
-      <div className="products_content_filter_favorites">
-        <LinkToFavorite to="/favorite">
-          <h3>My favorites</h3>
-        </LinkToFavorite>
-      </div>
-    </div>
+    </>
   );
 };
 
