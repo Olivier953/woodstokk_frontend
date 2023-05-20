@@ -7,7 +7,7 @@ const About = () => {
         labore ipsa, doloribus cumque repellat expedita eos recusandae, placeat
         dignissimos ea corporis veniam neque excepturi soluta culpa, nesciunt
         aperiam adipisci molestias? Id porro blanditiis magnam nesciunt ducimus
-        similique autem dolor providt vitae, commo accusamus maxime eaque
+        similique autem dolor providt vitae, commogit accusamus maxime eaque
         quas harum? Cumque, fuga?
       </p>
     </div>
