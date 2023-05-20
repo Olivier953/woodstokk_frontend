@@ -6,15 +6,7 @@ import { favoriteContext } from '../context/FavoriteContext';
 import { shoppingCartContext } from '../context/ShoppingCartContext';
 
 const Products = () => {
-  const {
-    furnituresList,
-    setFurnituresList,
-    filter,
-    setFilter,
-    price,
-    setPrice,
-  } = useContext(apiContext);
-
+  const productsList = useContext(apiContext);
   const cart = useContext(shoppingCartContext);
   const favorite = useContext(favoriteContext);
 
@@ -24,21 +16,12 @@ const Products = () => {
         <h1>list of furnitures</h1>
         <div className="products_content">
           <div className="products_content_filter">
-            <Filter
-              furnituresList={furnituresList}
-              setFurnituresList={setFurnituresList}
-              filter={filter}
-              setFilter={setFilter}
-              price={price}
-              setPrice={setPrice}
-            />
+            <Filter productsList={productsList} />
           </div>
           <div className="products_content_list">
             <ProductList
-              furnituresList={furnituresList}
+              productsList={productsList}
               cart={cart}
-              filter={filter}
-              price={price}
               favorite={favorite}
             />
           </div>

@@ -14,12 +14,7 @@ root.render(
     <ApiContext>
       <ShoppingCartContext>
         <FavoriteContext>
-          <PayPalScriptProvider
-            options={{
-              'client-id':
-                'AQWG7--zgiJrkCe86x1_S-WBeanKvPStrcqjpX9GLEjkV-14i3WGpeTNxHQaBl66Ibogp3XcN_DVWTTh',
-            }}
-          >
+          <PayPalScriptProvider>
             <App />
           </PayPalScriptProvider>
         </FavoriteContext>

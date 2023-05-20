@@ -2,7 +2,7 @@ import { RegisterLink } from '../../styled-component/StyledLink';
 import Button from '../../utils/Button';
 import Input from '../../utils/Input';
 
-const Login = ({ fields, handleLogin, handleSubmit }) => {
+const LoginContent = ({ fields, handleLogin, handleSubmit }) => {
   return (
     <div className="login">
       <div className="login_content">
@@ -49,4 +49,4 @@ const Login = ({ fields, handleLogin, handleSubmit }) => {
   );
 };
 
-export default Login;
+export default LoginContent;

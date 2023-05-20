@@ -11,11 +11,6 @@ const LoginContext = ({ children }) => {
     const currentToken = localStorage.getItem('token');
 
     if (currentToken && currentToken !== undefined) {
-      /*
-        - decoder le token 
-        - prendre la date d'expiration 
-        - si le token a expiré => setislogin(false) 
-      */
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);

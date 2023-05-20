@@ -4,11 +4,11 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { StyledLogoMagnify } from '../../styled-component/StyledLink';
 import { FavoriteBtn } from '../favorite/FavoriteBtn';
 
-export const ProductList = ({ cart, filter, price, favorite }) => {
+export const ProductList = ({ cart, productsList, favorite }) => {
   return (
     <>
-      {filter
-        .filter((data) => data.fields.price > parseInt(price, 10))
+      {productsList.filter
+        .filter((data) => data.fields.price > parseInt(productsList.price, 10))
         .map((item) => {
           return (
             <div

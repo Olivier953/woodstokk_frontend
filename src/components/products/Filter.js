@@ -1,60 +1,60 @@
 import { LinkToFavorite } from '../../styled-component/StyledLink';
 
-const Filter = ({ furnituresList, setFilter, price, setPrice }) => {
+const Filter = ({ productsList }) => {
   let maxPrice = 8000;
   let minPrice = 500;
 
   const handleSearch = (e) => {
     let value = e.target.value.toLowerCase();
     let result = [];
-    result = furnituresList.filter((data) => {
+    result = productsList.furnituresList.filter((data) => {
       return data.fields.name.toLowerCase().search(value) !== -1;
     });
-    setFilter(result);
+    productsList.setFilter(result);
   };
 
   const filterAll = () => {
     let result = [];
-    result = furnituresList.filter((data) => {
+    result = productsList.furnituresList.filter((data) => {
       return data;
     });
-    setFilter(result);
+    productsList.setFilter(result);
   };
 
   const filterIkea = () => {
     let result = [];
-    result = furnituresList.filter((data) => {
+    result = productsList.furnituresList.filter((data) => {
       return data.fields.company === 'ikea';
     });
-    setFilter(result);
+    productsList.setFilter(result);
   };
 
   const filterCaressa = () => {
     let result = [];
-    result = furnituresList.filter((data) => {
+    result = productsList.furnituresList.filter((data) => {
       return data.fields.company === 'caressa';
     });
-    setFilter(result);
+    productsList.setFilter(result);
   };
 
   const filterMarcos = () => {
     let result = [];
-    result = furnituresList.filter((data) => {
+    result = productsList.furnituresList.filter((data) => {
       return data.fields.company === 'marcos';
     });
-    setFilter(result);
+    productsList.setFilter(result);
   };
 
   const filterLiddy = () => {
     let result = [];
-    result = furnituresList.filter((data) => {
+    result = productsList.furnituresList.filter((data) => {
       return data.fields.company === 'liddy';
     });
-    setFilter(result);
+    productsList.setFilter(result);
   };
 
   const handleRange = (e) => {
-    setPrice(e.target.value);
+    productsList.setPrice(e.target.value);
   };
 
   return (
@@ -70,10 +70,10 @@ const Filter = ({ furnituresList, setFilter, price, setPrice }) => {
           <h3>Companies</h3>
           <ul>
             <li onClick={filterAll}>All</li>
-            <li onClick={filterIkea}>Ikea</li>
             <li onClick={filterCaressa}>Caressa</li>
             <li onClick={filterMarcos}>Marcos</li>
             <li onClick={filterLiddy}>Liddy</li>
+            <li onClick={filterIkea}>Ikea</li>
           </ul>
         </div>
         <div className="products_content_filter_price">
@@ -82,11 +82,11 @@ const Filter = ({ furnituresList, setFilter, price, setPrice }) => {
             type="range"
             min={minPrice}
             max={maxPrice}
-            value={price}
+            value={productsList?.price}
             onChange={(e) => handleRange(e)}
           />
           <h4>
-            Show price {'>'} <span>${price / 100}</span>
+            Show price {'>'} <span>${productsList?.price / 100}</span>
           </h4>
         </div>
         <div className="products_content_filter_favorites">

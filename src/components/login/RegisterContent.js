@@ -48,12 +48,6 @@ const RegisterContent = ({ fields, handleRegister, handleSubmit }) => {
                 value={fields?.password}
                 onChange={handleRegister}
               />
-              <Input
-                className="registration_input_password"
-                type="password"
-                name="password"
-                placeholder="Confirm your password"
-              />
             </div>
           </div>
           <Button

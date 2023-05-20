@@ -38,7 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeComponent />} />
         <Route path="/products" element={<ProductsComponent />} />
-        <Route path="/contact" element={<AboutComponent />} />
+        <Route path="/about" element={<AboutComponent />} />
         <Route path="/login" element={<LoginComponent />} />
         <Route path="/register" element={<RegisterComponent />} />
         <Route path="/myaccount" element={<MyAccountComponent />} />

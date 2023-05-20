@@ -60,8 +60,8 @@ const HeaderContent = ({
               </NavLink>
             </li>
             <li>
-              <NavLink style={navLinkStyles} to="/contact">
-                Contact
+              <NavLink style={navLinkStyles} to="/about">
+                About
               </NavLink>
             </li>
             <li>

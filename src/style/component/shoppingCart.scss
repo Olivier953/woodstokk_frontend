@@ -155,8 +155,6 @@
       font-weight: bold;
       border-radius: 10px;
       cursor: pointer;
-      @include respond(phone) {
-      }
     }
     &_quantity {
       margin-left: 5px;
